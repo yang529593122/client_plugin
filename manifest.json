@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "巨量星图",
+  "version" : "1.0",
+  "description" : "巨量星图插件",
+  "browser_action" : {
+    "default_icon" : "1.png"
+  },
+  "permissions" : [
+    "http://*/*",
+    "https://*/*",
+    "contextMenus",
+    "tabs"
+  ] ,
+  "content_scripts": [
+    {
+      "matches": ["https://www.xingtu.cn/*"],
+      "css": ["index.css"],
+      "js": ["jquery.js","md5.js","task_type.js","datetime.js","index.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
